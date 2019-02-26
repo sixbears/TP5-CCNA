@@ -19,18 +19,21 @@ route à ajouter : ```conf t / ip route 10.5.1.0 255.255.255.0 10.2.3.253```
 directement connecté à net1  
 route à ajouter :    
 ```sudo nano etc/sysconfig/network-scripts/route-enp0s3    10.5.2.0 via 10.5.1.254 dev enp0s3```    
-fichiers hosts à remplir : client1.tp5.b1, client2.tp5.b1  
+fichiers hosts à remplir :   
+```sudo nano /etc/hosts 10.5.2.10 client1.tp5.b1, 10.5.2.11 client2.tp5.b1```
 
 - client1.tp5.b1  
 directement connecté à net2
 route à ajouter :  
 ```sudo nano etc/sysconfig/network-scripts/route-enp0s3    10.5.1.0 via 10.5.2.254 dev enp0s3```    
-fichiers hosts à remplir : server1.tp5.b1, client2.tp5.b1  
+fichiers hosts à remplir :   
+```sudo nano /etc/hosts 10.5.1.10 server1.tp5.b1, 10.5.2.11 client2.tp5.b1```  
 
 - client2.tp5.b1  
 directement connecté à net2
 route à ajouter :     
 ```sudo nano etc/sysconfig/network-scripts/route-enp0s3    10.5.1.0 via 10.5.2.254 dev enp0s3```     
-fichiers hosts à remplir : server1.tp5.b1, client1.tp5.b1  
+fichiers hosts à remplir :   
+```sudo nano /etc/hosts 10.5.1.10 server1.tp5.b1 10.5.2.10 client1.tp5.b1```  
 
 
